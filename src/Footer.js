@@ -20,8 +20,12 @@ function Footer () {
             <div className="footer-contact">
                 <h3>Contact</h3>
                 <p>555 Main St, Chicago</p>
-                <p><b>Phone number:</b>123-456-7890</p>
-                <p><b>Email:</b>littlelemon55@gmail.com</p>
+                <p>
+                    <b>Phone number:</b> <a href="tel:+123-456-7890">123-456-7890</a>
+                </p>
+                <p>
+                    <b>Email:</b><a href="mailto:littlelemon55@gmail.com">littlelemon55@gmail.com</a>
+                </p>
             </div>
             <div className="footer-social">
                 <h3>Social Media</h3>

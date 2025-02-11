@@ -1,28 +1,434 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+
+ .App {
+  display: grid;
+    text-align: center;
+  grid-template-areas:
+  "header nav"
+  "main main"
+  "footer footer";
+
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  
+
+}
+
+
+
+ header {
+  grid-area: header;
+  background-color: white;
+  padding: 10px 20px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+header img {
+  height: auto;
+  width: auto;
+  display: block;
+  margin-left: 0;
+}
+
+
+
+
+ nav {
+  grid-area: nav;
+  background-color: white;
+  padding: 15px;
+  text-align: center;
+font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+ 
+  
+
+}
+
+nav ul {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  overflow: hidden;
+  gap: 15px;
+  
+}
+
+nav li {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav a {
+  text-decoration: none;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+nav a:hover {
+  color: #61dafb;
+}
+
+main {
+  grid-area: main;
+  background-color: #495e57;
+  padding: 15px;
+  color: white;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px; 
+}
+
+
+
+#hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  
+
+}
+
+
+#hero h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #f4ce14;
+  
+
+}
+#hero h3 {
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+#hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  grid-column: 2 / 3;
+}
+
+#hero button {
+  color: black;
+  background-color: #f4ce14;
+  border-radius: 5px;
+  border-color: black;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
+#hero button:hover {
+  background-color: black;
+  color: white;
+  border-color: #f4ce14;
+}
+
+#hero h2,
+#hero h3,
+#hero p,
+#hero button {
+  grid-column: 1 / 2; 
+}
+
+/* Estilo general del contenedor de highlights */
+#highlights {
+  padding: 40px;
+  background-color: white;
+  color:black;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 10px;
+}
+
+#highlights .specials-header h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  grid-column: 1 / 2;
+
+}
+
+#highlights .specials-header button {
+  color: black;
+  background-color: #f4ce14;
+  border-radius: 5px;
+  border-color: black;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  grid-column: 3 / 4;
+
+}
+
+#highlights .specials-header button:hover {
+  background-color: black;
+  color: white;
+  border-color: #f4ce14;
+}
+
+#highlights .specials-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+
+}
+
+ .dish-container {
+  background-color: #d9d9d9;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.dish-container img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+ .dish-container p.price{
+  color: orange;
+  font-weight: bold;
+  
+ }
+ 
+
+ #About {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  
+ }
+
+ #About h2,
+ #About p{
+  grid-column: 1 / 2;
+ }
+
+ #About img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  grid-column: 2 / 3;
+ }
+
+ #About h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #f4ce14;
+ }
+
+
+
+
+
+footer {
+  display: grid; /* Activamos el grid */
+  grid-template-columns: 2fr 2fr 2fr 2fr; /* 4 columnas: logo, menu, contacto, social */
+  gap: 20px; /* Espacio entre las columnas */
+  padding: 20px; /* Espaciado alrededor del footer */
+  background-color: white; /* Fondo oscuro para el footer */
+  color: black; /* Color del texto */
+}
+
+footer .footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .footer-logo img {
+  width: 150px; /* Ajusta el tamaño del logo */
+  height: auto;
+}
+
+footer .footer-section ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer-section ul li {
+  margin: 10px 0; /* Espacio entre los elementos de la lista */
+}
+
+footer .footer-section ul li a {
+  text-decoration: none;
+  color: black; /* Color de los enlaces */
+}
+
+footer .footer-section ul li a:hover {
+  color: #61dafb; /* Color cuando el mouse pasa sobre el enlace */
+}
+
+footer .footer-contact,
+footer .footer-social {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en una columna */
+  justify-content: center;
+}
+
+footer h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+footer .footer-contact p,
+footer .footer-social p {
+  margin: 5px 0;
+}
+footer .footer-contact p a {
+  text-decoration: none;
+  color: black; /* Color de los enlaces de contacto */
+}
+footer .footer-contact p a:hover {
+  color: #61dafb; /* Color cuando el mouse pasa sobre el enlace */
+}
+
+
+footer .footer-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer-social ul li {
+  margin: 5px 0;
+}
+
+footer .footer-social ul li a {
+  text-decoration: none;
+  color: black; /* Color de los enlaces sociales */
+}
+
+footer .footer-social ul li a:hover {
+  color: #61dafb; /* Color cuando el mouse pasa sobre el enlace */
+}
+
+/* Estilos para pantallas con un ancho máximo de 768px (tabletas y móviles) */
+@media screen and (max-width: 768px) {
+
+  .App {
+    grid-template-columns: 1fr; /* Hacemos que header y nav ocupen toda la fila */
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "footer";
+  }
+
+  header {
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav {
+    text-align: center;
+    padding: 10px;
+  }
+
+  footer {
+    grid-template-columns: 1fr; /* Para que todo el footer sea una sola columna */
+    grid-template-areas: 
+      "footer-logo"
+      "footer-section"
+      "footer-contact"
+      "footer-social";
+  }
+
+  footer .footer-logo,
+  footer .footer-section,
+  footer .footer-contact,
+  footer .footer-social {
+    text-align: center; /* Centra los elementos dentro del footer */
+    padding: 10px;
+  }
+
+  footer .footer-section ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  footer .footer-section ul li {
+    margin: 5px 0; /* Espacio entre los elementos de la lista */
+  }
+
+  footer .footer-contact,
+  footer .footer-social {
+    display: block;
+  }
+
+  footer .footer-social ul li {
+    margin: 5px 0;
+  }
+  
+  footer a {
+    color: black;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: #61dafb;
+    text-decoration: underline;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Estilos para pantallas más pequeñas, como móviles con menos de 480px */
+@media screen and (max-width: 480px) {
+
+  header {
+    font-size: 20px; /* Ajusta el tamaño del texto en el header */
+  }
+
+  nav {
+    font-size: 18px; /* Ajusta el tamaño del texto en el nav */
+  }
+
+  footer {
+    grid-template-columns: 1fr; /* Una sola columna para el footer */
+    gap: 15px;
+    padding: 15px;
+  }
+
+  footer .footer-logo img {
+    width: 120px; /* Ajusta el tamaño del logo en pantallas más pequeñas */
+  }
+
+  footer .footer-section ul {
+    font-size: 14px; /* Ajusta el tamaño de la lista */
+  }
+
+  footer .footer-contact,
+  footer .footer-social {
+    font-size: 14px; /* Ajusta el tamaño de los textos */
+  }
+
 }
+
+
+
+
 
 .App-link {
   color: #61dafb;
