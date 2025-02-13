@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
 
- .App {
+.App {
   display: grid;
     text-align: center;
   grid-template-areas:
@@ -14,6 +14,10 @@
   height: 100vh;
   
 
+}
+
+a {
+  cursor: pointer;
 }
 
 
@@ -84,6 +88,7 @@ main {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 20px; 
+  
 }
 
 
@@ -109,20 +114,21 @@ main {
 #hero h3 {
   font-style: italic;
   font-size: 1.5rem;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 
 }
 
 #hero p {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 #hero img {
-  width: 100%;
+  max-width: 400px;
   height: auto;
   border-radius: 10px;
   grid-column: 2 / 3;
+  margin-left: 70px;
 }
 
 #hero button {
@@ -138,6 +144,14 @@ main {
   background-color: black;
   color: white;
   border-color: #f4ce14;
+}
+
+button a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 #hero h2,
@@ -156,10 +170,12 @@ main {
   border-radius: 10px;
 }
 
+
 #highlights .specials-header h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   grid-column: 1 / 2;
+  margin-bottom: 50px;
 
 }
 
@@ -170,7 +186,8 @@ main {
   border-color: black;
   padding: 10px 20px;
   font-size: 1.2rem;
-  grid-column: 3 / 4;
+  grid-column: 2 / 3 ;
+  margin-bottom: 50px;
 
 }
 
@@ -226,7 +243,7 @@ main {
  }
 
  #About img {
-  width: 100%;
+  width: 800px;
   height: auto;
   border-radius: 10px;
   grid-column: 2 / 3;
@@ -236,6 +253,11 @@ main {
   font-size: 2rem;
   margin-bottom: 10px;
   color: #f4ce14;
+ }
+
+ #About p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
  }
 
 
@@ -325,109 +347,108 @@ footer .footer-social ul li a:hover {
   color: #61dafb; /* Color cuando el mouse pasa sobre el enlace */
 }
 
-/* Estilos para pantallas con un ancho máximo de 768px (tabletas y móviles) */
-@media screen and (max-width: 768px) {
 
+/* Estilos para pantallas medianas (tablets, 768px o más) */
+@media screen and (max-width: 1024px) {
   .App {
-    grid-template-columns: 1fr; /* Hacemos que header y nav ocupen toda la fila */
     grid-template-areas:
       "header"
       "nav"
       "main"
       "footer";
+    grid-template-columns: 1fr;
   }
 
   header {
-    padding: 10px;
+    justify-content: center;
     text-align: center;
   }
 
-  nav {
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #hero {
+    grid-template-columns: 1fr;
     text-align: center;
-    padding: 10px;
+  }
+
+  #hero img {
+    margin: 0 auto;
+  }
+
+  #highlights .specials-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #About {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  #About img {
+    width: 100%;
+    margin: 0 auto;
   }
 
   footer {
-    grid-template-columns: 1fr; /* Para que todo el footer sea una sola columna */
-    grid-template-areas: 
-      "footer-logo"
-      "footer-section"
-      "footer-contact"
-      "footer-social";
-  }
-
-  footer .footer-logo,
-  footer .footer-section,
-  footer .footer-contact,
-  footer .footer-social {
-    text-align: center; /* Centra los elementos dentro del footer */
-    padding: 10px;
-  }
-
-  footer .footer-section ul {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-
-  footer .footer-section ul li {
-    margin: 5px 0; /* Espacio entre los elementos de la lista */
-  }
-
-  footer .footer-contact,
-  footer .footer-social {
-    display: block;
-  }
-
-  footer .footer-social ul li {
-    margin: 5px 0;
-  }
-  
-  footer a {
-    color: black;
-    text-decoration: none;
-  }
-
-  footer a:hover {
-    color: #61dafb;
-    text-decoration: underline;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-/* Estilos para pantallas más pequeñas, como móviles con menos de 480px */
-@media screen and (max-width: 480px) {
+/* Estilos para móviles (pantallas menores a 768px) */
+@media screen and (max-width: 768px) {
+  .App {
+    grid-template-columns: 1fr;
+  }
 
   header {
-    font-size: 20px; /* Ajusta el tamaño del texto en el header */
+    flex-direction: column;
+    text-align: center;
   }
 
-  nav {
-    font-size: 18px; /* Ajusta el tamaño del texto en el nav */
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main {
+    grid-template-rows: auto;
+  }
+
+  #hero {
+    grid-template-columns: 1fr;
+  }
+
+  #hero img {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  #highlights .specials-container {
+    grid-template-columns: 1fr;
+  }
+
+  #About {
+    grid-template-columns: 1fr;
+  }
+
+  #About img {
+    width: 100%;
+    margin: 0 auto;
   }
 
   footer {
-    grid-template-columns: 1fr; /* Una sola columna para el footer */
-    gap: 15px;
-    padding: 15px;
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  footer .footer-logo img {
-    width: 120px; /* Ajusta el tamaño del logo en pantallas más pequeñas */
+  footer .footer-logo {
+    justify-content: center;
   }
-
-  footer .footer-section ul {
-    font-size: 14px; /* Ajusta el tamaño de la lista */
-  }
-
-  footer .footer-contact,
-  footer .footer-social {
-    font-size: 14px; /* Ajusta el tamaño de los textos */
-  }
-
 }
-
-
-
 
 
 .App-link {

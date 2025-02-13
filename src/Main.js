@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Main () {
     return (
         <main>
@@ -6,7 +8,9 @@ function Main () {
                 <h3>Chicago</h3>
                 <p>A family owned mediterranean restuarant on the heart of Chicago.</p>
             <img src="/restauranfood.jpg" alt="A dish"/>
-            <button>Reserve a table</button>
+            <button>
+                <Link to="/reservations">Reserve a Table</Link>
+                 </button>
             </section>
 
             <section id="highlights">
@@ -37,7 +41,9 @@ function Main () {
                 </section>
                 <section id="About">
                     <h2>About</h2>
-                    <p>Little Lemon is a mediterranean family owned restaurand since 1985, now in charge by Mario and Adrian.</p>
+                    <p> Little Lemon is a mediterranean family-owned restaurant since 1985,<br />
+                         now in charge by Mario and Adrian, the youngest of 9 brothers,<br />
+                        they keep the tradition of the mediterranean cuisine.</p>
                     <img src="Owners.jpg" alt="Mario and Adrian"/>
                 </section>
         </main>

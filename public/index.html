@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      window.MyAPI = {
+          getAvailableTimes: async (selectedDate) => {
+              console.log("Simulando llamada a la API con fecha:", selectedDate);
+              return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]; // Horarios simulados
+          }
+      };
+  </script>
     <meta name="description" content="A family owned meditarrean restaurant in the heart of the city of Chicago."/>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -33,6 +41,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+   
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
