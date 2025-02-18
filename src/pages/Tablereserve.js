@@ -96,7 +96,7 @@ function TableReserve() {
                 <label htmlFor="email">Email:</label>
                 <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                 <label htmlFor="date">Date:</label>
-                <input type="date" id="date" name="date" value={date} onChange={(e) => setDate(e.target.value)} required />
+                <input type="date" id="date" name="date" value={date} onChange={(e) => setDate(e.target.value)} min={new Date().toISOString().split("T")[0]} onClick={(e) => e.target.showPicker && e.target.showPicker()} required />
                 <label htmlFor="time">Time:</label>
                 <select id="time" value={time} onChange={(e) => setTime(e.target.value)}
                  > {availableTimes.map((t, index) => (
@@ -116,14 +116,14 @@ function TableReserve() {
                     <option value="Engagement>">Engagement</option>
                     </select>
             
-                <input type="submit" value="Reserve Table" />
+                <input type="submit" value="Reserve Table" aria-label='Submit reservation form' />
             </form>
         </main>
 
         </div>
 
             </>
-
+ 
     )
 }
 export default TableReserve;

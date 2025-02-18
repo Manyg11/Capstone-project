@@ -195,6 +195,7 @@ button a {
   background-color: black;
   color: white;
   border-color: #f4ce14;
+  cursor: pointer;
 }
 
 #highlights .specials-container {

@@ -9,14 +9,14 @@ function Main () {
                 <p>A family owned mediterranean restuarant on the heart of Chicago.</p>
             <img src="/restauranfood.jpg" alt="A dish"/>
             <button>
-                <Link to="/reservations">Reserve a Table</Link>
+                <Link to="/reservations" aria-label="Reserve a table">Reserve a Table</Link>
                  </button>
             </section>
 
             <section id="highlights">
                 <div class="specials-header">
                 <h2>Specials</h2>
-                <button>Online Menu</button>
+                <button aria-label="On Click">Online Menu</button>
                 </div>
                 <div class="specials-container">
                 <div class="dish-container">

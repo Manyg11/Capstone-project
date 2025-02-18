@@ -38,6 +38,22 @@
     font-size: 18px;
  }
 
+ input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+  }
+  
+  input[type="date"] {
+    cursor: pointer;
+  }
+  
+  input[type="number"] {
+    cursor: pointer;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    cursor: pointer;
+  }
 
 
 /* MAIN */
