@@ -46,7 +46,7 @@ function Nav () {
                 <li><a href="/Menu">Menu</a></li>
                 <li><RouterLink to="/reservations">Reservations</RouterLink></li>
                 <li><a href="/Order online">Order Online</a></li>
-                <li><a href="/Login">Login</a></li>
+                <li><RouterLink to="/LogIn">Login</RouterLink></li>
             </ul>
 
         </nav>

@@ -6,6 +6,7 @@ import Header from './Header';
 import Main from './Main';
 import Nav from './Nav';
 import Tablereserve from './pages/Tablereserve';
+import LogIn from './pages/LogIn';
 
 
 
@@ -22,6 +23,7 @@ function App() {
       <Route path="/" element={<Main />} />
       <Route path="/reservations" element={<Tablereserve />} />
       <Route path="/Home" element={<Main />} />
+      <Route path="/LogIn" element={<LogIn />} />
     </Routes>
     
     <Footer />

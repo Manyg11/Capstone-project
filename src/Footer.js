@@ -76,7 +76,7 @@ function Footer () {
         <li><a href="/Menu">Menu</a></li>
         <li><RouterLink to="/reservations">Reservations</RouterLink></li>
         <li><a href="/Order online">Order Online</a></li>
-        <li><a href="/Login">Login</a></li>
+        <li><RouterLink to="/LogIn">Log in</RouterLink></li>
             </ul>
             </div>
             <div className="footer-contact">
